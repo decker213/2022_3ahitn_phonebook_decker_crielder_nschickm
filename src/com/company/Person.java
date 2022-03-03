@@ -10,9 +10,30 @@ public class Person {
     private Date birthday;
     private Phone phonenumber;
 
-    public Person(String name, String givenname, Date birthday, Phone phonenumber) {
+    public String getName() {
+        return name;
+    }
+
+    public String getGivenname() {
+        return givenname;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public Phone getPhonenumber() {
+        return phonenumber;
+    }
+
+    public Person(String name, String givenname, String nickname, Date birthday, Phone phonenumber) {
         this.name = name;
         this.givenname = givenname;
+        this.nickname = nickname;
         this.birthday = birthday;
         this.phonenumber = phonenumber;
     }

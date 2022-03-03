@@ -6,6 +6,7 @@ package com.company;
 public class Person {
     private String name;
     private String givenname;
+    private String nickname;
     private Date birthday;
     private Phone phonenumber;
 
@@ -21,6 +22,7 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", givenname='" + givenname + '\'' +
+                ", nickname='" + nickname + '\'' +
                 ", birthday=" + birthday +
                 ", phonenumber=" + phonenumber +
                 '}';

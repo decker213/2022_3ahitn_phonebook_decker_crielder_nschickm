@@ -85,6 +85,7 @@ public class PhoneNumber {
                 '}';
     }
 
+
     /**
      * Prueft ob die Telefonnummner gueltig ist
      *

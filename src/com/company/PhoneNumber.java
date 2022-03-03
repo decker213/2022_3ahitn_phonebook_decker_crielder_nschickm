@@ -41,7 +41,6 @@ public class PhoneNumber {
         String[] parts = number.split(" ");
         country = Integer.parseInt(parts[0]);
         areacode = Integer.parseInt(parts[1]);
-
     }
 
     /**

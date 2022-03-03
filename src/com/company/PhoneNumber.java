@@ -38,9 +38,13 @@ public class PhoneNumber {
     PhoneNumber(String number) {
         this.number = Integer.parseInt(number);
 
+        // "/" noch machen
+/*
         String[] parts = number.split(" ");
         country = Integer.parseInt(parts[0]);
         areacode = Integer.parseInt(parts[1]);
+        */
+
     }
 
     /**

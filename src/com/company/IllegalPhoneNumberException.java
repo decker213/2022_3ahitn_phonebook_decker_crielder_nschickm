@@ -3,12 +3,12 @@ package com.company;
 /**
  * @author david
  */
-public class IllegalPhoneNumberException extends Exception{
+public class IllegalPhoneNumberException extends Exception {
     private int type;
-    private int COUNTRY_ILLEGAL;
-    private int AREA_ILLEGAL;
-    private int NUMBER_ILLEGAL;
-    private int STRING_FORMAT_ILLEGAL;
+    public static final int COUNTRY_ILLEGAL = 1;
+    public static final int AREA_ILLEGAL = 2;
+    public static final int NUMBER_ILLEGAL = 3;
+    public static final int STRING_FORMAT_ILLEGAL = 4;
 
     public IllegalPhoneNumberException(int type) {
         this.type = type;

@@ -8,7 +8,7 @@ public class Person {
     private String givenname;
     private String nickname;
     private Date birthday;
-    private Phone phonenumber;
+    private PhoneNumber phonenumber;
 
     public String getName() {
         return name;
@@ -26,11 +26,11 @@ public class Person {
         return birthday;
     }
 
-    public Phone getPhonenumber() {
+    public PhoneNumber getPhonenumber() {
         return phonenumber;
     }
 
-    public Person(String name, String givenname, String nickname, Date birthday, Phone phonenumber) {
+    public Person(String name, String givenname, String nickname, Date birthday, PhoneNumber phonenumber) {
         this.name = name;
         this.givenname = givenname;
         this.nickname = nickname;

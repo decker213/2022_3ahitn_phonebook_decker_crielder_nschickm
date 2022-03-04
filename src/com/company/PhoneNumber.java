@@ -39,29 +39,26 @@ public class PhoneNumber {
      */
     PhoneNumber(String number) throws IllegalPhoneNumberException {
 
-
-
-
-        String zwischenspeicher = "";
+        String zwischenspeicher = " ";
         String[] parts = number.split(" ");
 
 
-            this.country = Integer.parseInt(parts[0]);
-            if (this.country < 0 || this.country > 999) {
-                throw new IllegalPhoneNumberException(COUNTRY_ILLEGAL);
-            }
+        this.country = Integer.parseInt(parts[0]);
+        if (this.country < 0 || this.country > 999) {
+            throw new IllegalPhoneNumberException(COUNTRY_ILLEGAL);
+        }
 
         zwischenspeicher = parts[1];
         String[] parts2 = zwischenspeicher.split("/");
 
 
-            this.areacode = Integer.parseInt(parts[0]);
+        this.areacode = Integer.parseInt(parts[0]);
         if (this.areacode <= 0 || this.areacode > 9999) {
             throw new IllegalPhoneNumberException(AREA_ILLEGAL);
         }
 
         this.number = Integer.parseInt(parts[1]);
-        if (this.number < 999 || this.number > 999999999){
+        if (this.number < 999 || this.number > 999999999) {
             throw new IllegalPhoneNumberException(NUMBER_ILLEGAL);
         }
 
@@ -116,7 +113,7 @@ public class PhoneNumber {
      * @return true wenn die Telefonnummer gueltig ist
      * false wenn die Telefonnummer nicht gueltig ist
      */
-    boolean isValid(PhoneNumber d) {
+    boolean isValid(PhoneNumber d) throws IllegalPhoneNumberException {
         boolean rv = false;
 
         Pattern pattern = Pattern.compile("(\\+|\\d+)\\s\\d+\\/\\d+");
@@ -124,6 +121,8 @@ public class PhoneNumber {
 
         if (matcher.find()) {
             rv = true;
+        } else {
+            throw new IllegalPhoneNumberException(STRING_FORMAT_ILLEGAL);
         }
 
 

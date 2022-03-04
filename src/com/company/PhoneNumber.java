@@ -36,14 +36,18 @@ public class PhoneNumber {
      * @param number ist die komplette Telefonnummer
      */
     PhoneNumber(String number) {
-        this.number = Integer.parseInt(number);
 
-        // "/" noch machen
-/*
+        // this.number = Integer.parseInt(number);
+        String zwischenspeicher = "";
+
         String[] parts = number.split(" ");
         country = Integer.parseInt(parts[0]);
-        areacode = Integer.parseInt(parts[1]);
-        */
+        zwischenspeicher = parts[1];
+
+        String[] parts2 = zwischenspeicher.split("/");
+        areacode = Integer.parseInt(parts[0]);
+      //  number = Integer.parseInt(parts[1]);
+
 
     }
 
@@ -98,10 +102,10 @@ public class PhoneNumber {
     boolean isValid(PhoneNumber d) {
         boolean rv = false;
 
-        Pattern pattern = Pattern.compile("\\d+\\s\\d+");
+        Pattern pattern = Pattern.compile("(\\+|\\d+)\\s\\d+\\/\\d+");
         Matcher matcher = pattern.matcher((CharSequence) d);
 
-        if(matcher.find()){
+        if (matcher.find()) {
             rv = true;
         }
 

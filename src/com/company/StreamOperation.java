@@ -23,7 +23,7 @@ public class StreamOperation {
 
     /**
      * @param r -> liest die Daten einer Person aus
-     * @return -> gibt die ausgelesene Person zurück
+     * @return -> gibt die ausgelesene Person zurück, falls das File aus ist wird NULL zurückegegeben
      * @throws IOException
      */
     public Person fromStream(Reader r) throws IOException, IllegalDateException {

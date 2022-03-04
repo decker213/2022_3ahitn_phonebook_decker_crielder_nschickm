@@ -17,9 +17,9 @@ public class Main {
         // write your code here
         StreamOperation so = new StreamOperation();
         ArrayList<Date> al = new ArrayList<>();
-
         FileReader fr = new FileReader("personen.csv");
-        while(so.fromStream(fr)!=null) {
+
+        while (so.fromStream(fr) != null) {
             al.add(so.fromStream(fr).getBirthday());
         }
     }

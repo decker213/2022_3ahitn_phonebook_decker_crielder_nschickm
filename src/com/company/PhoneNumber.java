@@ -52,12 +52,13 @@ public class PhoneNumber {
         String[] parts2 = zwischenspeicher.split("/");
 
 
-        this.areacode = Integer.parseInt(parts[0]);
+        this.areacode = Integer.parseInt(parts2[0]);
         if (this.areacode <= 0 || this.areacode > 9999) {
             throw new IllegalPhoneNumberException(AREA_ILLEGAL);
         }
 
-        this.number = Integer.parseInt(parts[1]);
+
+        this.number = Integer.parseInt(parts2[1]);
         if (this.number < 999 || this.number > 999999999) {
             throw new IllegalPhoneNumberException(NUMBER_ILLEGAL);
         }

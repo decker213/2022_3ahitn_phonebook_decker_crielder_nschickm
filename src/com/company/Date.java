@@ -39,11 +39,11 @@ public class Date {
      */
     public Date(String date) throws IllegalDateException {
         String[] parts = date.split("\\.");
-        int mon = Integer.parseInt(parts[0]);
-        int day = Integer.parseInt(parts[1]);
-        if (!(mon < 13 && mon > 0)) {
+        int day = Integer.parseInt(parts[0]);
+        int mon = Integer.parseInt(parts[1]);
+        if (mon > 12 || mon < 1) {
             throw new IllegalDateException(IllegalDateException.MON_ILLEGAL);
-        } else if (day < 31 && day > 0) {
+        } else if (day > 31 || day < 1) {
             throw new IllegalDateException(IllegalDateException.DAY_ILLEGAL);
         }
 

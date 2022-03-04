@@ -37,16 +37,15 @@ public class PhoneNumber {
      */
     PhoneNumber(String number) {
 
-        // this.number = Integer.parseInt(number);
         String zwischenspeicher = "";
 
         String[] parts = number.split(" ");
-        country = Integer.parseInt(parts[0]);
+        this.country = Integer.parseInt(parts[0]);
         zwischenspeicher = parts[1];
 
         String[] parts2 = zwischenspeicher.split("/");
-        areacode = Integer.parseInt(parts[0]);
-      //  number = Integer.parseInt(parts[1]);
+        this.areacode = Integer.parseInt(parts[0]);
+        this.number = Integer.parseInt(parts[1]);
 
 
     }

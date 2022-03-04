@@ -26,7 +26,7 @@ public class StreamOperation {
      * @return -> gibt die ausgelesene Person zurück
      * @throws IOException
      */
-    public Person fromStream(Reader r) throws IOException, IllegalDateException {
+    public Person fromStream(Reader r) throws IOException, IllegalDateException, IllegalPhoneNumberException {
         Person p = null;
         BufferedReader br = new BufferedReader(r);
         String s = br.readLine();

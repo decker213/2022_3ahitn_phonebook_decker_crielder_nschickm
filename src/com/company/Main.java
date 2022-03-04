@@ -13,7 +13,7 @@ public class Main {
     /**
      * Lest die Geburtstage aller Personen in eine ArrayList ein
      */
-    public static void main(String[] args) throws IOException, IllegalDateException {
+    public static void main(String[] args) throws IOException, IllegalDateException, IllegalPhoneNumberException {
         // write your code here
         StreamOperation so = new StreamOperation();
         ArrayList<Date> al = new ArrayList<>();

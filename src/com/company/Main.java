@@ -1,13 +1,27 @@
 package com.company;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
 
+/**
+ * @author criedler
+ */
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    /**
+     * Lest die Geburtstage aller Personen in eine ArrayList ein
+     */
+    public static void main(String[] args) throws IOException, IllegalDateException {
+        // write your code here
+        StreamOperation so = new StreamOperation();
+        ArrayList<Date> al = new ArrayList<>();
 
+        FileReader fr = new FileReader("personen.csv");
+        while(so.fromStream(fr)!=null) {
+            al.add(so.fromStream(fr).getBirthday());
+        }
     }
 }
+

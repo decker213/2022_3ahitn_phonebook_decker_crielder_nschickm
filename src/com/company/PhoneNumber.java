@@ -3,6 +3,8 @@ package com.company;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.company.IllegalPhoneNumberException.*;
+
 /**
  * @auther: Nico Schickmair
  * In dieser Klasse wird geprueft ob eine Telefonnummer gueltig ist.
@@ -35,20 +37,36 @@ public class PhoneNumber {
      *
      * @param number ist die komplette Telefonnummer
      */
-    PhoneNumber(String number) {
+    PhoneNumber(String number) throws IllegalPhoneNumberException {
+
+
+
 
         String zwischenspeicher = "";
-
         String[] parts = number.split(" ");
-        this.country = Integer.parseInt(parts[0]);
+
+
+            this.country = Integer.parseInt(parts[0]);
+            if (this.country < 0 || this.country > 999) {
+                throw new IllegalPhoneNumberException(COUNTRY_ILLEGAL);
+            }
+
         zwischenspeicher = parts[1];
-
         String[] parts2 = zwischenspeicher.split("/");
-        this.areacode = Integer.parseInt(parts[0]);
-        this.number = Integer.parseInt(parts[1]);
 
+
+            this.areacode = Integer.parseInt(parts[0]);
+        if (this.areacode <= 0 || this.areacode > 9999) {
+            throw new IllegalPhoneNumberException(AREA_ILLEGAL);
+        }
+
+        this.number = Integer.parseInt(parts[1]);
+        if (this.number < 999 || this.number > 999999999){
+            throw new IllegalPhoneNumberException(NUMBER_ILLEGAL);
+        }
 
     }
+
 
     /**
      * Genierte Funktion
@@ -107,6 +125,7 @@ public class PhoneNumber {
         if (matcher.find()) {
             rv = true;
         }
+
 
         return rv;
     }

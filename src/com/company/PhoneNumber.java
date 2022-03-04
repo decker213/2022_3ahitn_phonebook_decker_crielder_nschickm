@@ -32,10 +32,12 @@ public class PhoneNumber {
         number = this.number;
     }
 
+
     /**
      * Die Telefonnummer wird geteilt in country und areacode durch ein Leerzeichen
      *
      * @param number ist die komplette Telefonnummer
+     * @throws IllegalPhoneNumberException ueberprueft ob country, number, areaycode im richtigen Wertebereich liegen
      */
     PhoneNumber(String number) throws IllegalPhoneNumberException {
 
@@ -107,12 +109,14 @@ public class PhoneNumber {
                 '}';
     }
 
+
     /**
      * Prueft ob die Telefonnummner gueltig ist
      *
      * @param d ist die Telefonnummer
      * @return true wenn die Telefonnummer gueltig ist
      * false wenn die Telefonnummer nicht gueltig ist
+     * @throws IllegalPhoneNumberException ueberprueft ob der String (komplette PhoneNummer) im richtigen Wertebereich liegt
      */
     boolean isValid(PhoneNumber d) throws IllegalPhoneNumberException {
         boolean rv = false;

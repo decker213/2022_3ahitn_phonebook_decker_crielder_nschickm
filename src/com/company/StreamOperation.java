@@ -1,9 +1,10 @@
 package com.company;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * @author david
@@ -16,9 +17,8 @@ public class StreamOperation {
      * @throws IOException
      */
     public void ToStream(Writer w, Person p) throws IOException {
-        String stream = p.getName() + ";" + p.getGivenname() + ";" + p.getNickname() + ";" + p.getBirthday() + ";" + p.getPhonenumber();
-        w.write(stream);
-        w.close();
+        String s = p.getName() + ";" + p.getGivenname() + ";" + p.getNickname() + ";" + p.getBirthday() + ";" + p.getPhonenumber();
+        w.write(s);
     }
 
     /**
@@ -26,11 +26,19 @@ public class StreamOperation {
      * @return -> gibt die ausgelesene Person zurück
      * @throws IOException
      */
-    public Person fromStream(Reader r) throws IOException {
+    public Person fromStream(Reader r) throws IOException, IllegalDateException {
         Person p = null;
-        while (r.read() != -1) {
+        BufferedReader br = new BufferedReader(r);
+        String s = br.readLine();
 
+        if (s != null) {
+            String[] parts = s.split(";");
+            Date date = new Date(parts[3]);
+            PhoneNumber phoneNumber = new PhoneNumber(parts[4]);
+            p = new Person(parts[0], parts[1], parts[2], date, phoneNumber);
         }
+
         return p;
     }
+
 }

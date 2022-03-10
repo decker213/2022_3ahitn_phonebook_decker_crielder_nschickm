@@ -21,7 +21,7 @@ public class Date {
     public Date(int day, int mon, int year) throws IllegalDateException {
         if (!(mon < 13 && mon > 0)) {
             throw new IllegalDateException(IllegalDateException.MON_ILLEGAL);
-        } else if (day < 31 && day > 0) {
+        } else if (!(day < 31 && day > 0)) {
             throw new IllegalDateException(IllegalDateException.DAY_ILLEGAL);
         }
         this.day = day;

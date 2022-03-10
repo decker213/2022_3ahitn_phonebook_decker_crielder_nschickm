@@ -121,7 +121,7 @@ public class PhoneNumber {
     boolean isValid(PhoneNumber d) throws IllegalPhoneNumberException {
         boolean rv = false;
 
-        Pattern pattern = Pattern.compile("(\\+|\\d+)\\s\\d+\\/\\d+");
+        Pattern pattern = Pattern.compile("(\\+\\d+|\\d+)\\s\\d+\\/\\d+");
         Matcher matcher = pattern.matcher((CharSequence) d);
 
         if (matcher.find()) {

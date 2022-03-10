@@ -22,6 +22,9 @@ public class Main {
         while (so.fromStream(fr) != null) {
             al.add(so.fromStream(fr).getBirthday());
         }
+        for (int i = 0; i < al.size(); i++) {
+            System.out.println(al.get(i));
+        }
     }
 }
 

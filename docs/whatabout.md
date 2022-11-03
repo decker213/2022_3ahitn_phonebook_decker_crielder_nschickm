@@ -2,4 +2,4 @@
 
 Das Programm wurde von David, Constantin und {{Schicki.png}} erstellt.
 Es besteht aus 3 Hauptklassen:
-PhoneNumber, Date und Person.
+[PhoneNumber](phoneNumber.md), Date und Person.

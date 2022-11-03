@@ -2,5 +2,4 @@
 
 #Link zu Trello:
 https://trello.com/b/zmeQ6Lt5/eckerhuberschickmair </br>
-Mani </br>
-[mehr](about_me.md)
+Mani [mehr](about_me.md)

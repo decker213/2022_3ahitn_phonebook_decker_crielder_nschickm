@@ -1,3 +1,7 @@
-#Führerbunker:
+#Mitglieder:
 
-Leini, Chimani, Kimi
+David Ecker, Constantin Riedler und Nico Schickmair
+
+#Leher:
+
+Herr Professor Wittner

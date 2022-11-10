@@ -7,3 +7,5 @@ Es besteht aus 3 Hauptklassen:
 - [Person](person.md) 
 
 <img src="images/project.png" />
+
+[Home](index.md)

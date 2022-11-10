@@ -1,6 +1,6 @@
 # Mitglieder:
 {% for element in site.data.students %}
-- {{element.firstname}} {{element.lastname}}, {{element.class}}
+- {{element.firstname}} {{element.lastname}}, {{element.class}}, Wohnort: {{element.wohnort}}
 {% endfor %}
 
 # Lehrer:

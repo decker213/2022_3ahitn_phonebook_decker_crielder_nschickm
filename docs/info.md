@@ -1,4 +1,4 @@
-#Zweck des Programmes:
+# Zweck des Programmes:
 Es werden Informationen zu Person gespeichert. Außerdem wird überprüft ob diese Person eine gültig Telefonnummer besitzt. 
 Es besteht aus 3 Hauptklassen:
 

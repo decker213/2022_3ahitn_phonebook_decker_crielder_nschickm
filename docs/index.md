@@ -1,4 +1,4 @@
-# Projekt: Phonebook <img src="https://user-images.githubusercontent.com/95867717/199699267-5ed642af-b551-4744-9b41-3cdd068af44c.png" height="50px" />
+# Projekt: Phonebook <img src="https://user-images.githubusercontent.com/95867717/199699267-5ed642af-b551-4744-9b41-3cdd068af44c.png" height="25px" />
 
 Das [Trello](https://trello.com/b/zmeQ6Lt5/eckerhuberschickmair ) wurde verwendet zur Aufgabenverwaltung. 
 

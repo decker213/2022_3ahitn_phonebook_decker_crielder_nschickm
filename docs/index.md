@@ -9,4 +9,4 @@ https://trello.com/b/zmeQ6Lt5/eckerhuberschickmair
 
 {% for element in site.data.students %}
 - {{element.firstname}} {{element.lastnae}}, {{element.class}}
-{% endfor % }
+{% endfor %}

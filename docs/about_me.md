@@ -1,8 +1,10 @@
 #Mitglieder:
 
-David Ecker, Constantin Riedler und Nico Schickmair
+{% for element in site.data.students %}
+- {{element.firstname}} {{element.lastname}}, {{element.class}}
+{% endfor %}
 
-#Leher:
+#Lehrer:
 
 Herr Professor Wittner
 

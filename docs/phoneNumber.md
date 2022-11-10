@@ -3,5 +3,5 @@
 In dieser Klasse wurden die Telefonnummern ist Länder-Code und Vorwahl aufgeteilt
 und überprüft ob die übergegebene Telefonnummer gültig ist.
 
-<img src="images/phonenumber.png" />
+<img src="images/phonenumber.png" height="60px"/>
 Autor: Nico Schickmair

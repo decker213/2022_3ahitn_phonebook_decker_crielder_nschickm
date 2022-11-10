@@ -8,5 +8,5 @@ https://trello.com/b/zmeQ6Lt5/eckerhuberschickmair
 [Genaueres zum Programm](info.md).
 
 {% for element in site.data.students %}
-- {{element.firstname}} {{element.lastnae}}, {{element.class}}
+- {{element.firstname}} {{element.lastname}}, {{element.class}}
 {% endfor %}

@@ -3,7 +3,7 @@
 - {{element.firstname}} {{element.lastname}}, {{element.class}}, Wohnort: {{element.wohnort}}
 {% endfor %}
 
-##Lehrer:
+## Lehrer:
 Herr Professor Wittner
 
 ## Datum:

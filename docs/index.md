@@ -8,4 +8,3 @@ Eine kurze Beschreibung des [Programms](info.md) finden Sie hier.
 
 <img src="https://user-images.githubusercontent.com/95867717/199699338-5a62fdb7-8e4a-4109-8b66-61c2500af68e.png" />
 
-[Home](index.md)

@@ -4,3 +4,5 @@ Hier kann man Dateneiner Person ausgeben. Die Daten beinhalten Vor- und Nachname
 
 <img src="images/person.png" height="400"/>
 Autor: Constantin Riedler
+
+[Home](index.md)
